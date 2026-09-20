@@ -1,0 +1,44 @@
+# Attrition log (normalize.py)
+
+raw                                             398,793
+Topic in 4 conditions                           115,826  (-282967)
+DataSource in BRFSS/NVSS/CMS                    114,528  (-1298)
+DataValueType age-adjusted only                  39,232  (-75296)
+LocationAbbr != US                               38,496  (-736)
+QuestionID in crosswalk                          25,464  (-13032)
+normalized_long (output)                         25,464  (+0)
+
+# Notes
+
+all in-scope rows are single-year (YearStart == YearEnd)
+DataValueType excluded 'Number': 26,208 rows
+DataValueType excluded 'Crude Rate': 26,208 rows
+DataValueType excluded 'Crude Prevalence': 22,880 rows
+DataValueType KEPT     'Age-adjusted Rate': 21,632 rows
+DataValueType KEPT     'Age-adjusted Prevalence': 17,600 rows
+StratificationCategory1 'Race/Ethnicity': 68,944 rows before age-adjusted filter, 27,088 after
+StratificationCategory1 'Sex': 20,768 rows before age-adjusted filter, 8,096 after
+StratificationCategory1 'Age': 14,432 rows before age-adjusted filter, 0 after  (age bands cannot be age-adjusted; dropped entirely)
+StratificationCategory1 'Overall': 10,384 rows before age-adjusted filter, 4,048 after
+QuestionID mapped   AST01: 2,040 rows -> asthma/nvss/mortality
+QuestionID mapped   AST02: 2,700 rows -> asthma/brfss/prevalence
+QuestionID mapped   COPD01: 2,700 rows -> copd/brfss/prevalence
+QuestionID mapped   COPD02: 2,700 rows -> copd/brfss/treatment
+QuestionID unused   COPD03: 1,632 rows (any-diagnosis hospitalization; superseded by COPD04 (principal)) - Hospitalization for chronic obstructive pulmonary disease as any diagnosis, Medicare-beneficiaries aged 65 years and older
+QuestionID mapped   COPD04: 1,632 rows -> copd/cms/hospitalization
+QuestionID mapped   COPD05: 2,040 rows -> copd/nvss/mortality
+QuestionID unused   COPD06: 2,040 rows (underlying-or-contributing mortality; sensitivity only) - Chronic obstructive pulmonary disease mortality among adults aged 45 years and older, underlying or contributing cause
+QuestionID mapped   CVD01: 1,620 rows -> cardiovascular/brfss/prevalence
+QuestionID mapped   CVD02: 1,620 rows -> cardiovascular/brfss/treatment
+QuestionID unused   CVD03: 1,620 rows (high cholesterol prevalence; not paired with a mortality outcome) - High cholesterol among adults who have been screened
+QuestionID unused   CVD04: 1,620 rows (cholesterol medication; treatment item for CVD03, unused) - Taking medicine for high cholesterol among adults with high cholesterol
+QuestionID mapped   CVD06: 1,632 rows -> cardiovascular/cms/hospitalization
+QuestionID unused   CVD07: 2,040 rows (stroke mortality; sensitivity only) - Cerebrovascular disease (stroke) mortality among all people, underlying cause
+QuestionID unused   CVD08: 2,040 rows (coronary heart disease mortality; sensitivity only) - Coronary heart disease mortality among all people, underlying cause
+QuestionID mapped   CVD09: 2,040 rows -> cardiovascular/nvss/mortality
+QuestionID mapped   DIA01: 2,700 rows -> diabetes/brfss/prevalence
+QuestionID mapped   DIA03: 2,040 rows -> diabetes/nvss/mortality
+QuestionID unused   DIA04: 2,040 rows (diabetic ketoacidosis mortality; too sparse) - Diabetic ketoacidosis mortality among all people, underlying or contributing cause
+null values: suppressed=8,632 no_data=663 (all 9,295 nulls accounted for)
+values flagged interpret-with-caution: 0
+key ['LocationAbbr', 'YearStart', 'QuestionID', 'StratificationCategory1', 'Stratification1'] is unique
