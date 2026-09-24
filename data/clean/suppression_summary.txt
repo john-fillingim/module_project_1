@@ -1,0 +1,59 @@
+# Suppression and precision - headline numbers
+
+Overall (headline) cells: 2,628; suppressed 57 (2.2%)
+Stratified cells:         22,836; suppressed 8,575 (37.6%)
+
+## Suppression share by race/ethnicity group (all conditions, all instruments)
+  Native Hawaiian or Other Pacific Islander, non-Hispanic  93.7%  (1,881 of 2,007)
+  American Indian or Alaska Native, non-Hispanic  67.5%  (1,725 of 2,554)
+  Asian, non-Hispanic                            67.4%  (1,421 of 2,109)
+  Multiracial, non-Hispanic                      58.5%  (1,273 of 2,175)
+  Asian or Pacific Islander, non-Hispanic        41.9%  (171 of 408)
+  Hispanic                                       36.5%  (946 of 2,594)
+  Black, non-Hispanic                            31.6%  (814 of 2,578)
+  White, non-Hispanic                             5.1%  (132 of 2,594)
+
+## Suppression share by race/ethnicity group, BRFSS prevalence only
+  asthma
+    Native Hawaiian or Other Pacific Islander, non-Hispanic  95.8%   median CI width 6.3 pts (92% of estimate)
+    Asian, non-Hispanic                          81.3%   median CI width 5.0 pts (90% of estimate)
+    American Indian or Alaska Native, non-Hispanic  65.9%   median CI width 13.6 pts (91% of estimate)
+    Multiracial, non-Hispanic                    31.2%   median CI width 14.1 pts (86% of estimate)
+    Black, non-Hispanic                          28.0%   median CI width 7.0 pts (57% of estimate)
+    Hispanic                                     20.1%   median CI width 5.8 pts (70% of estimate)
+    White, non-Hispanic                           4.9%   median CI width 2.5 pts (24% of estimate)
+  cardiovascular
+    Native Hawaiian or Other Pacific Islander, non-Hispanic  91.6%   median CI width 16.3 pts (43% of estimate)
+    American Indian or Alaska Native, non-Hispanic  34.4%   median CI width 19.7 pts (58% of estimate)
+    Asian, non-Hispanic                          31.0%   median CI width 16.4 pts (70% of estimate)
+    Black, non-Hispanic                          15.9%   median CI width 9.6 pts (24% of estimate)
+    Multiracial, non-Hispanic                     6.4%   median CI width 17.8 pts (51% of estimate)
+    Hispanic                                      1.9%   median CI width 10.5 pts (40% of estimate)
+    White, non-Hispanic                           1.9%   median CI width 3.2 pts (11% of estimate)
+  copd
+    Native Hawaiian or Other Pacific Islander, non-Hispanic  96.9%   median CI width 4.0 pts (87% of estimate)
+    Asian, non-Hispanic                          86.3%   median CI width 1.8 pts (108% of estimate)
+    American Indian or Alaska Native, non-Hispanic  72.5%   median CI width 11.9 pts (101% of estimate)
+    Multiracial, non-Hispanic                    55.9%   median CI width 10.9 pts (95% of estimate)
+    Hispanic                                     53.4%   median CI width 3.5 pts (92% of estimate)
+    Black, non-Hispanic                          38.3%   median CI width 4.4 pts (73% of estimate)
+    White, non-Hispanic                           4.9%   median CI width 1.7 pts (27% of estimate)
+  diabetes
+    Native Hawaiian or Other Pacific Islander, non-Hispanic  94.2%   median CI width 10.4 pts (50% of estimate)
+    Asian, non-Hispanic                          67.6%   median CI width 10.3 pts (81% of estimate)
+    American Indian or Alaska Native, non-Hispanic  58.9%   median CI width 13.0 pts (85% of estimate)
+    Multiracial, non-Hispanic                    36.9%   median CI width 11.8 pts (93% of estimate)
+    Black, non-Hispanic                          26.5%   median CI width 6.7 pts (44% of estimate)
+    Hispanic                                     14.8%   median CI width 8.1 pts (58% of estimate)
+    White, non-Hispanic                           3.4%   median CI width 1.8 pts (22% of estimate)
+
+## Median CI width (points) by stratification category, BRFSS prevalence
+  Overall              1.90
+  Sex                  2.60
+  Race/Ethnicity       8.88
+
+## NVSS mortality suppression by condition (Overall stratification)
+  asthma           50 of 204 state-years suppressed (25%)
+  cardiovascular    0 of 204 state-years suppressed (0%)
+  copd              0 of 204 state-years suppressed (0%)
+  diabetes          0 of 204 state-years suppressed (0%)
