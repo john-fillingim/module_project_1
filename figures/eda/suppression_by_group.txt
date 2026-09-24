@@ -1,0 +1,12 @@
+# Share of race/ethnicity-stratified cells suppressed (excluding module-not-run cells), all instruments
+
+condition                                                 copd  cardiovascular  diabetes  asthma    all
+strat_group                                                                                            
+Native Hawaiian or Other Pacific Islander, non-Hispanic  0.976           0.897     0.892   0.976  0.937
+American Indian or Alaska Native, non-Hispanic           0.804           0.505     0.550   0.810  0.675
+Asian, non-Hispanic                                      0.851           0.417     0.491   0.886  0.674
+Multiracial, non-Hispanic                                0.787           0.367     0.486   0.612  0.585
+Asian or Pacific Islander, non-Hispanic                  0.627           0.211       NaN     NaN  0.419
+Hispanic                                                 0.593           0.120     0.143   0.506  0.365
+Black, non-Hispanic                                      0.401           0.179     0.237   0.438  0.316
+White, non-Hispanic                                      0.035           0.008     0.019   0.179  0.051

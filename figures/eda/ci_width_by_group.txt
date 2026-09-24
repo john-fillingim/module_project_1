@@ -1,0 +1,14 @@
+# Relative 95% CI width (hi - lo) / estimate, BRFSS age-adjusted prevalence, all conditions, reported cells only
+
+                                           count    25%    50%    75%
+group                                                                
+Overall                                    947.0  0.146  0.191  0.237
+White                                      911.0  0.171  0.224  0.286
+Sex: Female                                947.0  0.196  0.253  0.316
+Sex: Male                                  942.0  0.208  0.288  0.377
+Black                                      676.0  0.356  0.500  0.706
+Hispanic                                   713.0  0.425  0.613  0.868
+Native Hawaiian or Other Pacific Islander   47.0  0.439  0.673  0.916
+Asian                                      250.0  0.594  0.779  0.979
+American Indian or Alaska Native           366.0  0.592  0.808  1.007
+Multiracial                                609.0  0.633  0.826  0.991

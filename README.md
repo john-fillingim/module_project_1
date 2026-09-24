@@ -11,24 +11,64 @@ finding is. Link to the blog post.
 <!-- Owner: A -->
 ## Dataset
 
-Centers for Disease Control and Prevention. *U.S. Chronic Disease Indicators.*
-TODO (A): portal URL, portal version, download date.
+Centers for Disease Control and Prevention. *U.S. Chronic Disease Indicators
+(CDI)*. Available at https://data.cdc.gov/ (dataset "U.S. Chronic Disease
+Indicators"), full CSV export.
+TODO (A): download date, and the portal dataset ID / release version shown on the page.
 
-`data/raw/export.csv.gz` — 398,793 rows, 34 columns, 55 jurisdictions (50
-states, DC, GU, PR, VI) plus a US national row, 14 data sources, 19 topics.
-The file covers 2015-2023 overall, but the four conditions used here
-(COPD, cardiovascular, diabetes, asthma) are present only for 2019-2023.
-The raw export is 127 MB, so it is committed gzipped (9.6 MB); the scripts
-read the `.gz` directly. `gunzip -k data/raw/export.csv.gz` if you want the
-plain CSV. TODO (A): how the export was filtered on the portal, if at all.
+`data/raw/export.csv.gz` — 398,793 rows × 34 columns, 55 jurisdictions
+(50 states, DC, Guam, Puerto Rico, US Virgin Islands) plus a `US` national
+row, 14 data sources, 19 topics. The file covers 2015–2023 overall, but the
+four conditions used here (COPD, cardiovascular, diabetes, asthma) are
+present only for 2019–2023, and the mortality (NVSS) and hospitalization
+(CMS) instruments end in 2022. The raw export is 127 MB, so it is committed
+gzipped (9.6 MB); the scripts read the `.gz` directly.
+`gunzip -k data/raw/export.csv.gz` if you want the plain CSV.
 
-See `docs/data_profile.md` for what was verified in the file.
+Three instruments are used, all age-adjusted, `Overall` stratification for
+the headline analysis:
 
-Instruments used: BRFSS (self-reported prevalence), NVSS (mortality), CMS
-Part A (Medicare hospitalization).
+| Instrument | `DataSource` | What it measures | Unit |
+|---|---|---|---|
+| Survey | BRFSS | Self-reported diagnosed prevalence among adults; treatment among the diagnosed | % |
+| Claims | CMS Part A Claims Data | Hospitalization, principal diagnosis, Medicare beneficiaries 65+ | per 1,000 |
+| Death certificates | NVSS | Mortality, underlying cause (COPD: adults 45+) | per 100,000 |
+
+The exact `QuestionID` → condition crosswalk, with the reason for every
+choice, is in [src/normalize.py](src/normalize.py) (`CROSSWALK`). What was
+verified in the file before writing it is in
+[docs/data_profile.md](docs/data_profile.md).
+
+### Cleaned data (`data/clean/`, committed)
+
+| File | Grain | Produced by |
+|---|---|---|
+| `normalized_long.csv` | one row per state × year × question × stratification group (25,464 rows) | `build_panel.py` |
+| `panel.csv` | one row per state × year × condition, Overall only (1,074 rows) | `build_panel.py` |
+| `panel_fixture.csv` | 28-row subset of `panel.csv` for developing downstream code | `build_panel.py` |
+| `attrition_log.txt` | row count after every filter; every value type and question seen | `build_panel.py` |
+| `suppression_summary.csv` | suppression share and CI width per condition × instrument × stratification group | `suppression.py` |
+| `suppression_by_state.csv` | suppression counts per state × condition × stratification category | `suppression.py` |
+| `divergence.csv` | panel plus regression residuals, z-scores, and mechanism buckets | `divergence.py` (B) |
+
+Attrition through the pipeline (from `attrition_log.txt`):
+
+```
+raw                                398,793
+Topic in 4 conditions              115,826
+DataSource in BRFSS/NVSS/CMS       114,528
+DataValueType age-adjusted only     39,232
+LocationAbbr != US                  38,496
+QuestionID in crosswalk             25,464
+```
+
+Suppressed values are kept as NaN with the CDC footnote attached and a
+`suppressed` flag. They are never imputed and never treated as zero.
 
 <!-- Owner: A writes, B verifies from a fresh clone -->
 ## Reproduce
+
+Python 3.10+.
 
 ```bash
 pip install -r requirements.txt
@@ -39,13 +79,35 @@ python src/divergence.py  --panel data/clean/panel.csv --out data/clean
 python src/eda.py         --clean data/clean --out figures
 ```
 
+Run from the repository root. Each step reads only the files the previous
+step wrote; `build_panel.py` is the only script that touches the raw export.
 Outputs land in `data/clean/` and `figures/`; both are committed so the repo
-is inspectable without running anything.
+is inspectable without running anything. `build_panel.py` raises on any
+unrecognised `QuestionID`, any value that fails numeric parsing, and any
+duplicate key, so a silent schema change in a re-downloaded export will
+stop the pipeline rather than corrupt the panel.
 
 ## Repository layout
 
-See `WORK_SPLIT.md` for file ownership and the column contracts between
-pipeline stages. See `CLAUDE.md` for the method and design rules.
+```
+src/
+  load.py          read raw CSV.gz, coerce comma-formatted numerics, validate columns   (A)
+  normalize.py     age-adjusted filter, QuestionID -> condition crosswalk, attrition log (A)
+  build_panel.py   state x year x condition panel; writes data/clean/                   (A)
+  profile.py       EDA: coverage, 2020 discontinuity, suppression, CI width figures     (A)
+  suppression.py   suppression share and precision by stratification group             (A)
+  divergence.py    regression, residuals, z-scores, three-bucket classification         (B)
+  eda.py           story figures 1-3                                                    (B)
+data/raw/          export.csv.gz (committed); export.csv (gitignored, 127 MB)
+data/clean/        generated, committed
+figures/eda/       generated by profile.py, committed
+figures/           generated by eda.py, committed
+docs/              data_profile.md, ethics_A.md, blog draft
+slides/            presentation outline
+```
+
+See [WORK_SPLIT.md](WORK_SPLIT.md) for file ownership and the column
+contracts between pipeline stages.
 
 ## Team
 

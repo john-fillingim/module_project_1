@@ -1,0 +1,117 @@
+condition,instrument,measure,strat_category,strat_group,n_cells,n_suppressed,n_no_data,n_reported,median_value,median_ci_width,median_ci_rel_width,n_states_any_suppressed,suppression_share
+asthma,brfss,prevalence,Overall,Overall,270,0,6,264,10.5,2.1000000000000014,0.2041913539609392,0,0.0
+asthma,brfss,prevalence,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",270,170,12,88,14.95,13.55,0.9101131292570266,46,0.6589147286821705
+asthma,brfss,prevalence,Race/Ethnicity,"Asian, non-Hispanic",270,213,8,49,6.3,4.950000000000001,0.902563202247191,49,0.8129770992366412
+asthma,brfss,prevalence,Race/Ethnicity,"Black, non-Hispanic",270,74,6,190,12.6,7.0,0.5679943100995732,19,0.2803030303030303
+asthma,brfss,prevalence,Race/Ethnicity,Hispanic,270,53,6,211,9.4,5.8,0.6974789915966387,20,0.20075757575757575
+asthma,brfss,prevalence,Race/Ethnicity,"Multiracial, non-Hispanic",270,82,7,181,17.1,14.1,0.8565737051792827,35,0.311787072243346
+asthma,brfss,prevalence,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",270,248,11,11,8.9,6.300000000000001,0.9166666666666666,52,0.9575289575289575
+asthma,brfss,prevalence,Race/Ethnicity,"White, non-Hispanic",270,13,6,251,10.5,2.5,0.2411347517730497,3,0.04924242424242424
+asthma,brfss,prevalence,Sex,Female,270,0,6,264,13.2,3.3000000000000007,0.24893162393162388,0,0.0
+asthma,brfss,prevalence,Sex,Male,270,2,6,262,7.6,2.6000000000000005,0.34778131436060666,1,0.007575757575757576
+asthma,nvss,mortality,Overall,Overall,204,50,0,154,1.0,0.5,0.5,14,0.24509803921568626
+asthma,nvss,mortality,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",204,204,0,0,,,,51,1.0
+asthma,nvss,mortality,Race/Ethnicity,"Asian, non-Hispanic",204,200,0,4,0.75,0.4,0.5277777777777779,50,0.9803921568627451
+asthma,nvss,mortality,Race/Ethnicity,"Black, non-Hispanic",204,131,0,73,2.6,1.5999999999999999,0.6315789473684211,35,0.6421568627450981
+asthma,nvss,mortality,Race/Ethnicity,Hispanic,204,184,0,20,0.7,0.45,0.6,47,0.9019607843137255
+asthma,nvss,mortality,Race/Ethnicity,"Multiracial, non-Hispanic",204,204,0,0,,,,51,1.0
+asthma,nvss,mortality,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",204,204,0,0,,,,51,1.0
+asthma,nvss,mortality,Race/Ethnicity,"White, non-Hispanic",204,71,0,133,0.8,0.5000000000000001,0.6250000000000001,22,0.3480392156862745
+asthma,nvss,mortality,Sex,Female,204,77,0,127,1.2,0.7000000000000001,0.6000000000000001,23,0.37745098039215685
+asthma,nvss,mortality,Sex,Male,204,96,0,108,0.9,0.6000000000000001,0.7142857142857143,28,0.47058823529411764
+cardiovascular,brfss,prevalence,Overall,Overall,162,0,5,157,30.2,2.700000000000003,0.08868501529051993,0,0.0
+cardiovascular,brfss,prevalence,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",162,53,8,101,35.6,19.700000000000003,0.5797546012269938,24,0.34415584415584416
+cardiovascular,brfss,prevalence,Race/Ethnicity,"Asian, non-Hispanic",162,48,7,107,24.2,16.4,0.70446735395189,23,0.3096774193548387
+cardiovascular,brfss,prevalence,Race/Ethnicity,"Black, non-Hispanic",162,25,5,132,40.3,9.649999999999999,0.24033879709836414,10,0.1592356687898089
+cardiovascular,brfss,prevalence,Race/Ethnicity,Hispanic,162,3,5,154,28.3,10.450000000000001,0.40284258514347004,2,0.01910828025477707
+cardiovascular,brfss,prevalence,Race/Ethnicity,"Multiracial, non-Hispanic",162,10,6,146,33.6,17.799999999999997,0.5135588972431078,7,0.0641025641025641
+cardiovascular,brfss,prevalence,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",162,141,8,13,33.4,16.299999999999997,0.42558746736292424,50,0.9155844155844156
+cardiovascular,brfss,prevalence,Race/Ethnicity,"White, non-Hispanic",162,3,5,154,29.6,3.25,0.10780298837852789,1,0.01910828025477707
+cardiovascular,brfss,prevalence,Sex,Female,162,0,5,157,26.7,3.5,0.1273408239700374,0,0.0
+cardiovascular,brfss,prevalence,Sex,Male,162,0,5,157,33.7,4.199999999999996,0.11940298507462686,0,0.0
+cardiovascular,brfss,treatment,Overall,Overall,162,0,5,157,58.8,6.899999999999999,0.11523437500000011,0,0.0
+cardiovascular,brfss,treatment,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",162,112,9,41,61.2,19.700000000000003,0.31061598951507213,42,0.7320261437908496
+cardiovascular,brfss,treatment,Race/Ethnicity,"Asian, non-Hispanic",162,125,8,29,59.7,18.6,0.3120567375886525,45,0.8116883116883117
+cardiovascular,brfss,treatment,Race/Ethnicity,"Black, non-Hispanic",162,43,6,113,65.1,16.6,0.250338294993234,15,0.27564102564102566
+cardiovascular,brfss,treatment,Race/Ethnicity,Hispanic,162,39,5,118,55.650000000000006,16.7,0.3101218972522831,18,0.2484076433121019
+cardiovascular,brfss,treatment,Race/Ethnicity,"Multiracial, non-Hispanic",162,79,7,76,55.0,22.65,0.43099700470688923,34,0.5096774193548387
+cardiovascular,brfss,treatment,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",162,132,23,7,57.1,14.899999999999999,0.2718978102189781,50,0.9496402877697842
+cardiovascular,brfss,treatment,Race/Ethnicity,"White, non-Hispanic",162,3,5,154,57.5,7.900000000000002,0.14225980982371647,1,0.01910828025477707
+cardiovascular,brfss,treatment,Sex,Female,162,0,5,157,62.6,10.600000000000009,0.17272727272727273,0,0.0
+cardiovascular,brfss,treatment,Sex,Male,162,0,5,157,56.0,8.300000000000004,0.14742451154529304,0,0.0
+cardiovascular,cms,hospitalization,Overall,Overall,204,0,0,204,22.555,0.9499999999999993,0.03926433282597662,0,0.0
+cardiovascular,cms,hospitalization,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",204,108,0,96,27.155,13.385,0.42137851537819704,30,0.5294117647058824
+cardiovascular,cms,hospitalization,Race/Ethnicity,"Asian or Pacific Islander, non-Hispanic",204,43,0,161,16.57,6.879999999999999,0.36021285304952916,12,0.2107843137254902
+cardiovascular,cms,hospitalization,Race/Ethnicity,"Black, non-Hispanic",204,30,0,174,50.76,5.450000000000001,0.11538383397161744,8,0.14705882352941177
+cardiovascular,cms,hospitalization,Race/Ethnicity,Hispanic,204,20,0,184,24.015,7.055000000000001,0.26425634681633536,7,0.09803921568627451
+cardiovascular,cms,hospitalization,Race/Ethnicity,"White, non-Hispanic",204,0,0,204,20.325,0.9649999999999999,0.046753830479059705,0,0.0
+cardiovascular,cms,hospitalization,Sex,Female,204,0,0,204,21.675,1.2349999999999994,0.05420521128190277,0,0.0
+cardiovascular,cms,hospitalization,Sex,Male,204,0,0,204,23.744999999999997,1.4699999999999998,0.05787975799669006,0,0.0
+cardiovascular,nvss,mortality,Overall,Overall,204,0,0,204,162.7,7.6000000000000085,0.042525154211750495,0,0.0
+cardiovascular,nvss,mortality,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",204,88,0,116,144.2,71.19999999999999,0.5293167616974538,26,0.43137254901960786
+cardiovascular,nvss,mortality,Race/Ethnicity,"Asian, non-Hispanic",204,41,0,163,79.5,27.1,0.3892045454545453,11,0.20098039215686275
+cardiovascular,nvss,mortality,Race/Ethnicity,"Black, non-Hispanic",204,31,0,173,215.3,27.299999999999983,0.1286443148688047,10,0.15196078431372548
+cardiovascular,nvss,mortality,Race/Ethnicity,Hispanic,204,25,0,179,93.1,27.89999999999999,0.29508196721311475,8,0.12254901960784313
+cardiovascular,nvss,mortality,Race/Ethnicity,"Multiracial, non-Hispanic",204,100,0,104,61.05,34.95,0.6304696467771838,28,0.49019607843137253
+cardiovascular,nvss,mortality,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",204,173,0,31,197.3,141.2,0.6388888888888888,45,0.8480392156862745
+cardiovascular,nvss,mortality,Race/Ethnicity,"White, non-Hispanic",204,0,0,204,165.45,8.249999999999986,0.04550239208844834,0,0.0
+cardiovascular,nvss,mortality,Sex,Female,204,0,0,204,127.25,8.849999999999994,0.06308171283207076,0,0.0
+cardiovascular,nvss,mortality,Sex,Male,204,0,0,204,209.35,13.149999999999991,0.05782767938661175,0,0.0
+copd,brfss,prevalence,Overall,Overall,270,2,6,262,5.65,1.4000000000000004,0.23706512042818917,2,0.007575757575757576
+copd,brfss,prevalence,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",270,187,12,71,11.4,11.9,1.0087719298245612,49,0.7248062015503876
+copd,brfss,prevalence,Race/Ethnicity,"Asian, non-Hispanic",270,226,8,36,0.0,1.7999999999999998,1.0833333333333333,53,0.8625954198473282
+copd,brfss,prevalence,Race/Ethnicity,"Black, non-Hispanic",270,101,6,163,6.5,4.3999999999999995,0.7253824606765784,28,0.38257575757575757
+copd,brfss,prevalence,Race/Ethnicity,Hispanic,270,141,6,123,4.0,3.5000000000000004,0.9210526315789476,38,0.5340909090909091
+copd,brfss,prevalence,Race/Ethnicity,"Multiracial, non-Hispanic",270,147,7,116,11.9,10.9,0.9490208771645898,47,0.55893536121673
+copd,brfss,prevalence,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",270,251,11,8,4.9,3.95,0.8669499105545617,53,0.9691119691119691
+copd,brfss,prevalence,Race/Ethnicity,"White, non-Hispanic",270,13,6,251,5.8,1.6999999999999993,0.27027027027027023,3,0.04924242424242424
+copd,brfss,prevalence,Sex,Female,270,2,6,262,6.1,2.0,0.3141196013289036,2,0.007575757575757576
+copd,brfss,prevalence,Sex,Male,270,5,6,259,5.2,2.0,0.3658536585365855,2,0.01893939393939394
+copd,brfss,treatment,Overall,Overall,270,5,6,259,37.6,16.200000000000003,0.44012944983818775,2,0.01893939393939394
+copd,brfss,treatment,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",270,240,21,9,56.5,27.099999999999994,0.47964601769911497,52,0.963855421686747
+copd,brfss,treatment,Race/Ethnicity,"Asian, non-Hispanic",270,195,72,3,35.4,23.1,0.6327683615819208,53,0.9848484848484849
+copd,brfss,treatment,Race/Ethnicity,"Black, non-Hispanic",270,163,21,86,33.5,24.549999999999997,0.7188703275872284,44,0.6546184738955824
+copd,brfss,treatment,Race/Ethnicity,Hispanic,270,235,6,29,24.3,22.599999999999998,0.909967845659164,52,0.8901515151515151
+copd,brfss,treatment,Race/Ethnicity,"Multiracial, non-Hispanic",270,250,11,9,37.1,30.199999999999996,0.8272506082725061,54,0.9652509652509652
+copd,brfss,treatment,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",270,119,149,2,46.55,26.7,0.5711656923318464,51,0.9834710743801653
+copd,brfss,treatment,Race/Ethnicity,"White, non-Hispanic",270,19,6,245,40.2,18.300000000000004,0.48237885462555063,5,0.07196969696969698
+copd,brfss,treatment,Sex,Female,270,11,6,253,37.2,18.9,0.5182926829268293,4,0.041666666666666664
+copd,brfss,treatment,Sex,Male,270,19,6,245,38.4,21.3,0.5693693693693692,8,0.07196969696969698
+copd,cms,hospitalization,Overall,Overall,204,0,0,204,5.07,0.4300000000000006,0.08946371610845286,0,0.0
+copd,cms,hospitalization,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",204,148,0,56,8.57,5.8950000000000005,0.6892206426321985,40,0.7254901960784313
+copd,cms,hospitalization,Race/Ethnicity,"Asian or Pacific Islander, non-Hispanic",204,128,0,76,2.8899999999999997,1.31,0.5318751324032323,35,0.6274509803921569
+copd,cms,hospitalization,Race/Ethnicity,"Black, non-Hispanic",204,47,0,157,10.16,2.2300000000000004,0.21719858156028363,12,0.23039215686274508
+copd,cms,hospitalization,Race/Ethnicity,Hispanic,204,72,0,132,5.235,2.41,0.4675067451557518,24,0.35294117647058826
+copd,cms,hospitalization,Race/Ethnicity,"White, non-Hispanic",204,0,0,204,4.875,0.45999999999999996,0.0966496450367418,0,0.0
+copd,cms,hospitalization,Sex,Female,204,0,0,204,5.215,0.5999999999999996,0.11508443309209593,0,0.0
+copd,cms,hospitalization,Sex,Male,204,0,0,204,4.74,0.6300000000000003,0.1405603655603656,0,0.0
+copd,nvss,mortality,Overall,Overall,204,0,0,204,104.65,9.299999999999997,0.08536202092586154,0,0.0
+copd,nvss,mortality,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",204,161,0,43,134.5,87.89999999999999,0.7807268272764393,43,0.7892156862745098
+copd,nvss,mortality,Race/Ethnicity,"Asian, non-Hispanic",204,144,0,60,22.45,12.5,0.6691542288557213,40,0.7058823529411765
+copd,nvss,mortality,Race/Ethnicity,"Black, non-Hispanic",204,58,0,146,80.25,21.799999999999997,0.2711046887578026,16,0.28431372549019607
+copd,nvss,mortality,Race/Ethnicity,Hispanic,204,107,0,97,37.8,20.099999999999998,0.6077981651376145,28,0.5245098039215687
+copd,nvss,mortality,Race/Ethnicity,"Multiracial, non-Hispanic",204,174,0,30,73.5,53.849999999999994,0.7603360354635211,44,0.8529411764705882
+copd,nvss,mortality,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",204,200,0,4,55.55,45.599999999999994,0.8118894830659535,50,0.9803921568627451
+copd,nvss,mortality,Race/Ethnicity,"White, non-Hispanic",204,1,0,203,112.7,11.100000000000023,0.08921933085501862,1,0.004901960784313725
+copd,nvss,mortality,Sex,Female,204,0,0,204,96.55,11.699999999999996,0.11724320019465616,0,0.0
+copd,nvss,mortality,Sex,Male,204,0,0,204,115.25,15.34999999999999,0.12471286976995703,0,0.0
+diabetes,brfss,prevalence,Overall,Overall,270,0,6,264,9.9,1.700000000000001,0.17647058823529407,0,0.0
+diabetes,brfss,prevalence,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",270,152,12,106,17.15,13.0,0.851958525345622,42,0.5891472868217055
+diabetes,brfss,prevalence,Race/Ethnicity,"Asian, non-Hispanic",270,177,8,85,13.0,10.3,0.8148148148148148,46,0.6755725190839694
+diabetes,brfss,prevalence,Race/Ethnicity,"Black, non-Hispanic",270,70,6,194,14.7,6.65,0.44491129785247435,15,0.26515151515151514
+diabetes,brfss,prevalence,Race/Ethnicity,Hispanic,270,39,6,225,14.2,8.100000000000001,0.5785714285714286,15,0.14772727272727273
+diabetes,brfss,prevalence,Race/Ethnicity,"Multiracial, non-Hispanic",270,97,7,166,12.8,11.849999999999998,0.9278680770553835,41,0.3688212927756654
+diabetes,brfss,prevalence,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",270,244,11,15,19.4,10.399999999999999,0.5038759689922481,52,0.9420849420849421
+diabetes,brfss,prevalence,Race/Ethnicity,"White, non-Hispanic",270,9,6,255,8.3,1.7999999999999998,0.21794871794871787,3,0.03409090909090909
+diabetes,brfss,prevalence,Sex,Female,270,0,6,264,9.2,2.4000000000000004,0.2489669421487603,0,0.0
+diabetes,brfss,prevalence,Sex,Male,270,0,6,264,10.6,2.5999999999999996,0.2422117624223602,0,0.0
+diabetes,nvss,mortality,Overall,Overall,204,0,0,204,87.9,5.299999999999997,0.05447839981738291,0,0.0
+diabetes,nvss,mortality,Race/Ethnicity,"American Indian or Alaska Native, non-Hispanic",204,102,0,102,177.60000000000002,76.6,0.5089221764829298,27,0.5
+diabetes,nvss,mortality,Race/Ethnicity,"Asian, non-Hispanic",204,52,0,152,57.75,22.5,0.3953676325645575,18,0.2549019607843137
+diabetes,nvss,mortality,Race/Ethnicity,"Black, non-Hispanic",204,41,0,163,146.3,19.69999999999999,0.14532685035116158,11,0.20098039215686275
+diabetes,nvss,mortality,Race/Ethnicity,Hispanic,204,28,0,176,86.5,24.25,0.30141020667135454,10,0.13725490196078433
+diabetes,nvss,mortality,Race/Ethnicity,"Multiracial, non-Hispanic",204,130,0,74,50.75,30.799999999999997,0.6561415899790191,39,0.6372549019607843
+diabetes,nvss,mortality,Race/Ethnicity,"Native Hawaiian or Other Pacific Islander, non-Hispanic",204,169,0,35,215.4,132.89999999999998,0.6942193408968124,44,0.8284313725490197
+diabetes,nvss,mortality,Race/Ethnicity,"White, non-Hispanic",204,0,0,204,79.25,5.700000000000003,0.06548967355096597,0,0.0
+diabetes,nvss,mortality,Sex,Female,204,0,0,204,68.19999999999999,6.299999999999997,0.08276255707762559,0,0.0
+diabetes,nvss,mortality,Sex,Male,204,0,0,204,111.9,8.899999999999991,0.0733685720049293,0,0.0
