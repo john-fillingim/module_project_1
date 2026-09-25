@@ -1,20 +1,28 @@
 # When the Survey and the Death Certificate Disagree
 
-<!-- Owner: B -->
 ## Overview
 
-TODO (B): 3-5 sentences. What the story is, who it is for, what the one-line
-finding is. Link to the blog post.
+The CDC counts chronic disease three ways: a phone survey (how many adults
+say they have it), Medicare hospital claims (how many are admitted for it),
+and death certificates (how many die of it). This project asks what it means
+when those counts disagree. For each condition we regress state mortality on
+survey prevalence, treat the residual as "unexpected" mortality, and check
+whether hospitalization explains it.
+
+**Finding.** For COPD, states that hospitalize more have *lower* mortality
+than their prevalence predicts (r = −0.44 in 2021; r = −0.38 in the 2019
+replication). For cardiovascular disease there is no consistent relationship
+(r = 0.04 in 2021, 0.22 in 2019). This is a state-level association and is
+consistent with, but does not prove, hospital care reducing COPD deaths.
 
 **Public communication piece:** TODO link
 
-<!-- Owner: A -->
 ## Dataset
 
 Centers for Disease Control and Prevention. *U.S. Chronic Disease Indicators
 (CDI)*. Available at https://data.cdc.gov/ (dataset "U.S. Chronic Disease
 Indicators"), full CSV export.
-TODO (A): download date, and the portal dataset ID / release version shown on the page.
+TODO: download date and portal dataset ID / release version.
 
 `data/raw/export.csv.gz` — 398,793 rows × 34 columns, 55 jurisdictions
 (50 states, DC, Guam, Puerto Rico, US Virgin Islands) plus a `US` national
@@ -49,7 +57,7 @@ verified in the file before writing it is in
 | `attrition_log.txt` | row count after every filter; every value type and question seen | `build_panel.py` |
 | `suppression_summary.csv` | suppression share and CI width per condition × instrument × stratification group | `suppression.py` |
 | `suppression_by_state.csv` | suppression counts per state × condition × stratification category | `suppression.py` |
-| `divergence.csv` | panel plus regression residuals, z-scores, and mechanism buckets | `divergence.py` (B) |
+| `panel_verify.csv` | one row per state × year × condition, wide: prevalence / mortality / hospitalization with CI bounds (1,057 rows). **Input to the analysis.** | `verify_panel.py` |
 
 Attrition through the pipeline (from `attrition_log.txt`):
 
@@ -65,22 +73,35 @@ QuestionID in crosswalk             25,464
 Suppressed values are kept as NaN with the CDC footnote attached and a
 `suppressed` flag. They are never imputed and never treated as zero.
 
-<!-- Owner: A writes, B verifies from a fresh clone -->
 ## Reproduce
 
 Python 3.10+.
 
 ```bash
 pip install -r requirements.txt
+gunzip -k data/raw/export.csv.gz          # verify_panel.py reads the plain CSV
+
+# Upstream pipeline and EDA (run from the repository root)
 python src/build_panel.py --raw data/raw/export.csv.gz --out data/clean
 python src/profile.py     --long data/clean/normalized_long.csv --out figures/eda
 python src/suppression.py --long data/clean/normalized_long.csv --out data/clean
-python src/divergence.py  --panel data/clean/panel.csv --out data/clean
-python src/eda.py         --clean data/clean --out figures
+
+# Analysis (run from src/ — these scripts use paths relative to src/)
+cd src
+python verify_panel.py    # data/raw/export.csv -> data/clean/panel_verify.csv
+python analyze.py         # panel_verify.csv    -> figures/analysis/*.png + printed tables
 ```
 
-Run from the repository root. Each step reads only the files the previous
-step wrote; `build_panel.py` is the only script that touches the raw export.
+`verify_panel.py` rebuilds the wide panel directly from the raw export,
+independently of `build_panel.py`, as a cross-check; `analyze.py` reads its
+output. `analyze.py` fits one mortality-on-prevalence regression per
+condition for 2021 (the primary year, the latest with full BRFSS + NVSS + CMS
+coverage) and 2019 (replication), prints the best/worst five states by
+residual z-score and the hospitalization–residual correlations, and writes
+the eight presentation figures. CMS hospitalization is rescaled from per
+1,000 to per 100,000 to match mortality. It calls `plt.show()`, so set
+`MPLBACKEND=Agg` to run it headless.
+
 Outputs land in `data/clean/` and `figures/`; both are committed so the repo
 is inspectable without running anything. `build_panel.py` raises on any
 unrecognised `QuestionID`, any value that fails numeric parsing, and any
@@ -96,14 +117,15 @@ src/
   build_panel.py   state x year x condition panel; writes data/clean/                   (A)
   profile.py       EDA: coverage, 2020 discontinuity, suppression, CI width figures     (A)
   suppression.py   suppression share and precision by stratification group             (A)
-  divergence.py    regression, residuals, z-scores, three-bucket classification         (B)
-  eda.py           story figures 1-3                                                    (B)
+  verify_panel.py  independent rebuild of the wide panel -> panel_verify.csv             (B)
+  analyze.py       per-condition regressions, residual z-scores, figures 00-07          (B)
+  *.ipynb          exploratory notebooks behind the two scripts above                   (B)
 data/raw/          export.csv.gz (committed); export.csv (gitignored, 127 MB)
 data/clean/        generated, committed
 figures/eda/       generated by profile.py, committed
-figures/           generated by eda.py, committed
-docs/              data_profile.md, ethics_A.md, blog draft
-slides/            presentation outline
+figures/analysis/  generated by analyze.py, committed
+docs/              data_profile.md, ethics_A.md
+slides/            presentation outline (A_slides.md)
 ```
 
 See [WORK_SPLIT.md](WORK_SPLIT.md) for file ownership and the column
@@ -111,5 +133,5 @@ contracts between pipeline stages.
 
 ## Team
 
-- Person A (upstream pipeline, suppression, dataset ethics): TODO name
-- Person B (divergence analysis, figures, public piece): TODO name
+- John Fillingim — Person A: upstream pipeline, suppression, dataset ethics
+- Praful Chunchu — Person B: regression analysis, figures, public piece
