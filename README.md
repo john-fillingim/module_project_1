@@ -128,9 +128,6 @@ docs/              data_profile.md, ethics_A.md
 slides/            presentation outline (A_slides.md)
 ```
 
-See [WORK_SPLIT.md](WORK_SPLIT.md) for file ownership and the column
-contracts between pipeline stages.
-
 ## Team
 
 - John Fillingim — Person A: upstream pipeline, suppression, dataset ethics

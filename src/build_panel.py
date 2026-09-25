@@ -23,7 +23,7 @@ log = logging.getLogger(__name__)
 
 CONDITIONS = ["copd", "cardiovascular", "diabetes", "asthma"]
 
-# Contract 1 column order. Frozen; see WORK_SPLIT.md.
+# panel.csv column order. Frozen: downstream code depends on these names.
 PANEL_COLUMNS = [
     "state", "year", "condition",
     "brfss_prevalence_aa", "brfss_prevalence_lo", "brfss_prevalence_hi",

@@ -1,6 +1,6 @@
 # Person A slides — 2, 3, 4, 7 (~3.5 min total)
 
-Slide numbering follows WORK_SPLIT.md. B has 1, 5, 6, 8. Every number here
+B has 1, 5, 6, 8. Every number here
 is in a file under `data/clean/` or `figures/eda/`; sources in brackets.
 
 ---
