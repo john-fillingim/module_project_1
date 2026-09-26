@@ -2,13 +2,9 @@
 
 <!-- one or two sentences -->
 
-## Milestone
-
-<!-- which WORK_SPLIT.md milestone -->
-
 ## Contract check
 
-- [ ] Output CSV columns match the contract in WORK_SPLIT.md (or: no contract file touched)
+- [ ] Output CSV columns unchanged (or: the change is agreed and downstream code updated)
 - [ ] Row-count / attrition log pasted below (Person A PRs)
 - [ ] Regenerated `data/clean/` or `figures/` outputs are included in this PR
 
